@@ -1,0 +1,8 @@
+<form [formGroup]="utenteForm" (submit)="invio()">
+    <label for="nome">NOME</label><br>
+    <input name="nome" type="text" formControlName="nome"><br><br>
+    <label for="cognome">COGNOME</label><br>
+    <input name="cognome" type="text" formControlName="cognome"><br><br>
+
+    <button type="submit">INVIO</button>
+</form>
