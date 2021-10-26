@@ -10,8 +10,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { MytableComponent } from './mytable/mytable.component';
 import { FirstUpperCasePipe } from './first-upper-case.pipe';
-import { UppercasePipe } from './uppercase.pipe'
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,8 +17,7 @@ import { UppercasePipe } from './uppercase.pipe'
     MyformComponent,
     MylistaComponent,
     MytableComponent,
-    FirstUpperCasePipe,
-    UppercasePipe
+    FirstUpperCasePipe
   ],
   imports: [
     BrowserModule,
