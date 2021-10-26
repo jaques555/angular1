@@ -1,4 +1,7 @@
-<div *ngFor="let utente of utentiLista">
+<!--div *ngFor="let utente of utentiLista">
 
     {{utente.nome}} {{utente.cognome}}
-</div>
+    <button type="button" (click)="cancella(utente)">CANCELLA</button>
+</div-->
+
+<app-mytable [utentiChild]="utentiLista" (cancellaUtenteEvent)="cancella($event)"></app-mytable>

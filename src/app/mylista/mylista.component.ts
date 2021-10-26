@@ -21,4 +21,14 @@ export class MylistaComponent implements OnInit {
        })
   }
 
+
+  cancella(event) {
+
+    this.userService.cancellaUtente(event).subscribe(resp=>{
+
+      this.ngOnInit();
+
+    });
+  }
+
 }

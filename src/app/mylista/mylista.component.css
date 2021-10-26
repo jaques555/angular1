@@ -1,0 +1,6 @@
+div {
+    margin-top: 10px;
+    font-size: large;
+}
+
+* {display: flex; justify-content: center;}

@@ -1,0 +1,12 @@
+<table *ngIf="utentiChild.length > 0">
+    <tr>
+      <th>Nome</th>
+      <th>Cognome</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let utente of utentiChild">
+      <td>{{utente.nome | firstUpperCase:3}}</td>
+      <td>{{utente.cognome | firstUpperCase:3}}</td>
+      <td><button type="button" (click)="eliminaUtente(utente)">ELIMINA</button></td>
+    </tr>
+</table>
