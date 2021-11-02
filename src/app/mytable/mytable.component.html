@@ -5,8 +5,8 @@
       <th></th>
     </tr>
     <tr *ngFor="let utente of utentiChild">
-      <td>{{utente.nome | firstUpperCase:3}}</td>
-      <td>{{utente.cognome | firstUpperCase:3}}</td>
+      <td>{{utente.nome | firstUpperCase:1}}</td>
+      <td>{{utente.cognome | firstUpperCase:1}}</td>
       <td><button type="button" (click)="eliminaUtente(utente)">ELIMINA</button></td>
     </tr>
 </table>
