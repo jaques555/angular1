@@ -1,7 +1,12 @@
-<!--div *ngFor="let utente of utentiLista">
 
-    {{utente.nome}} {{utente.cognome}}
-    <button type="button" (click)="cancella(utente)">CANCELLA</button>
-</div-->
+<form #myform="ngForm" (ngSubmit)="ricerca(myform)">
+
+    <label for="nome">RICERCA PER NOME</label>
+    <input name="nome" type="text" ngModel>
+    <label for="cognome">RICERCA PER COGNOME</label>
+    <input name="cognome" type="text" ngModel>
+
+    <button type="submit">RICERCA</button>
+</form>
 
 <app-mytable [utentiChild]="utentiLista" (cancellaUtenteEvent)="cancella($event)"></app-mytable>

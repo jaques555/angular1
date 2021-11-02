@@ -24,4 +24,24 @@ export class UtenteService {
 
     return this.http.delete('http://localhost:3000/unsecured/user/'+id);
   }
+
+  ricercaUtenti(nome: string, cognome: string): Observable<Utente[]> {
+
+      if(nome !== '' && cognome !== '')
+
+       return this.http.get<Utente[]>('http://localhost:3000/unsecured/users/search/?nome='+nome+'&cognome='+cognome);
+
+      else if( nome !== '' && cognome === '')
+
+      return this.http.get<Utente[]>('http://localhost:3000/unsecured/users/search/?nome='+nome);
+
+      else if( nome === '' && cognome !== '')
+
+      return this.http.get<Utente[]>('http://localhost:3000/unsecured/users/search/?cognome='+cognome);
+
+      else
+
+       return this.getUtenti();
+
+  }
 }

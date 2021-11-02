@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Utente } from '../utente';
 import { UtenteService } from '../utente.service';
 
@@ -28,6 +29,18 @@ export class MylistaComponent implements OnInit {
 
       this.ngOnInit();
 
+    });
+  }
+
+
+  ricerca(myform) {
+
+    const nome = myform.form.controls.nome.value;
+    const cognome = myform.form.controls.cognome.value;
+
+    this.userService.ricercaUtenti(nome, cognome).subscribe(resp=>{
+
+              this.utentiLista = resp;
     });
   }
 
